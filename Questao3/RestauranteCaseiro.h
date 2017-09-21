@@ -1,7 +1,8 @@
 #ifndef RESTAURANTECASEIRO_H
 #define RESTAURANTECASEIRO_H
-#include "Pedidos.h"
 #include "MesaDeRestaurante.h"
+#include "Pedidos.h"
+
 
 
 class RestauranteCaseiro

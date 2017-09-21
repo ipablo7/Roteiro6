@@ -1,4 +1,5 @@
 #include "MesaDeRestaurante.h"
+#include "Pedidos.h"
 
 
 MesaDeRestaurante::MesaDeRestaurante()
