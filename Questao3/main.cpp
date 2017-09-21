@@ -28,7 +28,7 @@ int main()
 
 		switch(opcao)
 		{
-			case '1':
+			case 1:
 				cout << "\t\n*** CARDAPIO \t Preco ***" << endl;
 				cout << "1 - Hamburguer \t R$6,00" << endl;
 				cout << "2 - Batata Frita \t R$5,00" << endl;
@@ -43,41 +43,41 @@ int main()
 
 				switch(Opcardp)
 				{
-					case '1':
-						mesas.AdicionarAoPedido(Pedidos(1, quantidade, quantidade*6.00, "Hamburguer"),numMesa);
+					case 1:
+						mesas.AdicionarAoPedido(Pedidos(1, quantidade, quantidade*6.00, "Hamburguer"), numMesa);
 						break;
-					case '2':
+					case 2:
 						mesas.AdicionarAoPedido(Pedidos(2, quantidade, quantidade*5.00, "Batata Frita"),numMesa);
 						break;
-					case '3':
+					case 3:
 						mesas.AdicionarAoPedido(Pedidos(3, quantidade, quantidade*12.00, "Almoço completo"),numMesa);
 						break;
-					case '4':
+					case 4:
 						mesas.AdicionarAoPedido(Pedidos(4, quantidade, quantidade*20.00, "Picanha na brasa"),numMesa);
 						break;
-					case '5':
+					case 5:
 						mesas.AdicionarAoPedido(Pedidos(5, quantidade, quantidade*4.00, "Bebidas(diversos)"),numMesa);
 						break;
 				}
 				break;
 
-			case '2':
+			case 2:
 				mesas.getMesa(numMesa).zeraPedidos();
 				break;
 
-			case '3':
-				cout << "Total da conta: " << mesas.getMesas(numMesa).calculaTotal() << endl;
+			case 3:
+				cout << "Total da conta: " << mesas.getMesa(numMesa).calculaTotal() << endl;
 				break;
 
-			case '4':
-				break;
+			case 4:
+			    cout << "O total arrecadado foi de: " << mesas.calculaTotalRestaurante() << endl;
+				return -2;
 
 		}
+	}
 
-		cout << "O total arrecadado foi de: " << mesas.calculaTotalRestaurante() << endl;
 
 
 	return 0;
-
 }
 

@@ -7,12 +7,12 @@ RestauranteCaseiro::RestauranteCaseiro()
 
 void RestauranteCaseiro::AdicionarAoPedido(Pedidos pedido, int mesax)
 {
-    mesa[mesax].adicionaAoPedido(pedido);
+    mesa[mesax].adicionaAoPedido(pedido, mesax);
 }
 
 double RestauranteCaseiro::calculaTotalRestaurante()
 {
-    double fatura;
+    double fatura = 0;
     int j;
 
     for(j=0; j<TAM; j++)
@@ -21,4 +21,8 @@ double RestauranteCaseiro::calculaTotalRestaurante()
     }
 
     return fatura;
+}
+
+MesaDeRestaurante RestauranteCaseiro::getMesa(int nMesa){
+    return mesa[nMesa];
 }

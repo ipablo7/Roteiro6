@@ -1,8 +1,8 @@
 #ifndef RESTAURANTECASEIRO_H
 #define RESTAURANTECASEIRO_H
-#include "MesaDeRestaurante.h"
 #include "Pedidos.h"
-
+#include "MesaDeRestaurante.h"
+#define TAM 10
 
 
 class RestauranteCaseiro

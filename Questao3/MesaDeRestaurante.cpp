@@ -1,5 +1,4 @@
 #include "MesaDeRestaurante.h"
-#include "Pedidos.h"
 
 
 MesaDeRestaurante::MesaDeRestaurante()
@@ -8,20 +7,20 @@ MesaDeRestaurante::MesaDeRestaurante()
     total = 0.0;
 }
 
-void MesaDeRestaurante::adicionaAoPedido(Pedidos pedido_)
+void MesaDeRestaurante::adicionaAoPedido(Pedidos pedido_, int pedidosX)
 {
     pedido[pedidosX] = pedido_;
+    total += pedido[pedidosX].getPreco();
     pedidosX++;
-    total += pedido_.getPreco();
 }
 
 void MesaDeRestaurante::zeraPedidos()
 {
     int i;
 
-    for(i=0; i<pedidosX; i++)
-        pedido[i].setQuantidade(0);
-
+    for(i=0; i<TAM; i++){
+        pedido[i].setPreco(0);
+    }
     total = 0.0;
 }
 

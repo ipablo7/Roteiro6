@@ -1,11 +1,11 @@
 #include "Pedidos.h"
 
-Pedidos::Pedidos(int num, int quant, double prec, string desc)
+Pedidos::Pedidos(int numero, int quantidade, double preco, string descricao)
 {
-	setNumero(num);
-	setQuantidade(quant);
-	setPreco(prec);
-	setDescricao(desc);
+	setNumero(numero);
+	setQuantidade(quantidade);
+	setPreco(preco);
+	setDescricao(descricao);
 }
 
 Pedidos::Pedidos()
