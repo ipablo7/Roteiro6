@@ -4,7 +4,8 @@
 using namespace std;
 
 Televisao::Televisao(){
-
+    canal = 0;
+    volume = 0;
 }
 
 Televisao::~Televisao(){
@@ -30,29 +31,29 @@ int Televisao::getVolume(){
     return opcao;
 }*/
 int Televisao::aumentaVol(int volume){
-    this -> volume +=1;
+    this -> volume += 1;
     return volume;
 }
 int Televisao::dimiuiVol(int volume){
-    this -> volume -=1;
+    this -> volume -= 1;
     return volume;
 }
 int Televisao::aumentaCanal(int canal){
-    this -> canal +=1;
+    this -> canal += 1;
     return canal;
 }
 int Televisao::diminuiCanal(int canal){
-    this -> canal -=1;
+    this -> canal -= 1;
     return canal;
 }
 void Televisao::mudaCanal(int canal){
-    cout << endl << "+ = proximo canal" << endl << "- = canal anterior" << endl << "0 = escolha um canal" << endl;
-    cout << "Insira sua opcao: ";
+    cout << "\n" << "+ = proximo canal" << endl << "- = canal anterior" << endl << "0 = escolha um canal" << endl;
+    cout << "\n" << "Insira sua opcao: ";
     cin >> opcao;
     setOpcao(opcao);
     switch(opcao){
         case '+':
-            cout << "Canal no momento = " << canal << endl;
+            cout << "Canal no momento = " << getCanal() << endl;
             aumentaCanal(canal);
             cout << "Mudando de canal..." << endl << "Canal atual = " << getCanal() << endl;
             break;

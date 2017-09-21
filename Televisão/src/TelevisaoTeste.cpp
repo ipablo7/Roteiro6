@@ -10,6 +10,6 @@ TelevisaoTeste::~TelevisaoTeste()
     //dtor
 }
 
-void TelevisaoTeste::setTelevisao(Televisao televisao, int i){
-    this->televisao[i] = televisao;
+void TelevisaoTeste::setTelevisao(Televisao televisao){
+    this->televisao = televisao;
 }

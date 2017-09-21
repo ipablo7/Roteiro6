@@ -17,11 +17,11 @@ void exibeMenu(){
 
 int main(void){
     TelevisaoTeste tt1;
-    tt1.i = 0;
     Televisao tv1;
     int op, c, v;
 
     while(1){
+        cout << "\n";
         exibeMenu();
         cin >> op;
         switch(op){
@@ -32,8 +32,7 @@ int main(void){
                 cout << "Insira o volume: ";
                 cin >> v;
                 tv1.setVolume(v);
-                tt1.setTelevisao(tv1, tt1.i);
-                tt1.i++;
+                tt1.setTelevisao(tv1);
                 break;
             case 2:
                 tv1.aumentaVol(v);

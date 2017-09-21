@@ -1,6 +1,5 @@
 #ifndef TELEVISAOTESTE_H
 #define TELEVISAOTESTE_H
-#define TAM 3
 #include "Televisao.h"
 
 class TelevisaoTeste
@@ -9,9 +8,9 @@ class TelevisaoTeste
         TelevisaoTeste();
         virtual ~TelevisaoTeste();
         int i;
-        void setTelevisao(Televisao televisao, int i);
+        void setTelevisao(Televisao televisao);
     private:
-        Televisao televisao[TAM];
+        Televisao televisao;
 };
 
 #endif // TELEVISAOTESTE_H
