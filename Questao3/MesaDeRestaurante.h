@@ -8,19 +8,16 @@ class MesaDeRestaurante
 {
     private:
         Pedidos pedido[TAM];
-        //int pedidosX;
         double total;
 
     public:
         MesaDeRestaurante();
         int pedidosX;
         void adicionaAoPedido(Pedidos pedidos_, int pedidosX);
-        void zeraPedidos();
-        double calculaTotal();
+        void zeraPedidos(int zera);
+        double calculaTotal(int g);
 
         Pedidos getPedido();
-        int getPedidosX();
-
 };
 
 #endif

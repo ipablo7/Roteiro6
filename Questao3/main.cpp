@@ -10,14 +10,11 @@ int main()
 {
 
 	RestauranteCaseiro mesas;
-	int opcao, quantidade, numMesa, Opcardp;
+	int opcao, quantidade, numMesa, Opcardp, g = 0, zera;
 
 	while(1)
 	{
-		cout << "Informe o numero da mesa: ";
-		cin >> numMesa;
-
-		cout << "\t\n*** MENU ***" << endl;
+		cout << "\n\t*** MENU ***" << endl;
         cout << "1 - Novo pedido" << endl;
         cout << "2 - Cancelar pedido" << endl;
         cout << "3 - Fechar a conta" << endl;
@@ -29,10 +26,13 @@ int main()
 		switch(opcao)
 		{
 			case 1:
-				cout << "\t\n*** CARDAPIO \t Preco ***" << endl;
-				cout << "1 - Hamburguer \t R$6,00" << endl;
+			    cout << "\nInforme o numero da mesa: ";
+                cin >> numMesa;
+
+				cout << "\t\n*** CARDAPIO \t\t Preco ***" << endl;
+				cout << "1 - Hamburguer \t\t R$6,00" << endl;
 				cout << "2 - Batata Frita \t R$5,00" << endl;
-				cout << "3 - Almoço completo \t R$12,00" << endl;
+				cout << "3 - Almoco completo \t R$12,00" << endl;
 				cout << "4 - Picanha na brasa\t R$20,00" << endl;
 				cout << "5 - Bebidas(diversos) \t R$4,00" << endl;
 
@@ -44,39 +44,47 @@ int main()
 				switch(Opcardp)
 				{
 					case 1:
-						mesas.AdicionarAoPedido(Pedidos(1, quantidade, quantidade*6.00, "Hamburguer"), numMesa);
+						mesas.AdicionarAoPedido(Pedidos(1, quantidade, 6.00, "Hamburguer"), numMesa, g);
+						g++;
 						break;
 					case 2:
-						mesas.AdicionarAoPedido(Pedidos(2, quantidade, quantidade*5.00, "Batata Frita"),numMesa);
+						mesas.AdicionarAoPedido(Pedidos(2, quantidade, 5.00, "Batata Frita"),numMesa, g);
+                        g++;
 						break;
 					case 3:
-						mesas.AdicionarAoPedido(Pedidos(3, quantidade, quantidade*12.00, "Almoço completo"),numMesa);
+						mesas.AdicionarAoPedido(Pedidos(3, quantidade, 12.00, "Almoco completo"),numMesa, g);
+						g++;
 						break;
 					case 4:
-						mesas.AdicionarAoPedido(Pedidos(4, quantidade, quantidade*20.00, "Picanha na brasa"),numMesa);
+						mesas.AdicionarAoPedido(Pedidos(4, quantidade, 20.00, "Picanha na brasa"),numMesa, g);
+						g++;
 						break;
 					case 5:
-						mesas.AdicionarAoPedido(Pedidos(5, quantidade, quantidade*4.00, "Bebidas(diversos)"),numMesa);
+						mesas.AdicionarAoPedido(Pedidos(5, quantidade, 4.00, "Bebidas(diversos)"),numMesa, g);
+						g++;
 						break;
 				}
 				break;
-
 			case 2:
-				mesas.getMesa(numMesa).zeraPedidos();
-				break;
+			    cout << "\nInforme o numero da mesa: ";
+                cin >> numMesa;
 
+                cout << "Informe o numero do pedido que deseja cancelar: ";
+                cin >> zera;
+
+				mesas.getMesa(numMesa).zeraPedidos(zera-1);
+				break;
 			case 3:
-				cout << "Total da conta: " << mesas.getMesa(numMesa).calculaTotal() << endl;
+			    cout << "\nInforme o numero da mesa: ";
+                cin >> numMesa;
+
+				cout << "Total da conta: " << mesas.getMesa(numMesa).calculaTotal(g) << endl;
 				break;
-
 			case 4:
-			    cout << "O total arrecadado foi de: " << mesas.calculaTotalRestaurante() << endl;
+			    cout << "O total arrecadado foi = " << mesas.calculaTotalRestaurante(g) << " reais." << endl;
 				return -2;
-
 		}
 	}
-
-
 
 	return 0;
 }

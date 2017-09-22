@@ -13,15 +13,9 @@ class RestauranteCaseiro
     public:
         RestauranteCaseiro();
 
-        void AdicionarAoPedido(Pedidos,int);
-        double calculaTotalRestaurante();
+        void AdicionarAoPedido(Pedidos,int, int);
+        double calculaTotalRestaurante(int g);
         MesaDeRestaurante getMesa(int);
-
-
-
-
-
-
 };
 
 #endif

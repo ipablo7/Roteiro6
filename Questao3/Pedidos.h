@@ -25,6 +25,7 @@ class Pedidos
         int getQuantidade();
         double getPreco();
         string getDescricao();
+        double CalcPreco(double preco, int quantidade);
 };
 
 #endif

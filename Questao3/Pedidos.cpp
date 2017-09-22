@@ -56,3 +56,8 @@ string Pedidos::getDescricao()
     return descricao;
 }
 
+double Pedidos::CalcPreco(double preco, int quantidade)
+{
+    return preco*quantidade;
+}
+
